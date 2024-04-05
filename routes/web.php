@@ -10,19 +10,19 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/puntosRecoleccion', function() {
+Route::get('/puntos-recoleccion', function() {
     return view('puntosRecoleccion');} 
 )->name('irPuntosRecoleccion');
 
-Route::get('/misRecolecciones', function() {
+Route::get('/mis-recolecciones', function() {
     return view('misRecolecciones');} 
 )->name('irMisRecolecciones');
 
-Route::get('/listaEmpresas', function() {
+Route::get('/lista-empresas', function() {
     return view('listaEmpresas');} 
 )->name('irListaEmpresas');
 
-Route::get('/listaUsuarios', function() {
+Route::get('/lista-usuarios', function() {
     return view('listaUsuarios');} 
 )->name('irListaUsuarios');
 
