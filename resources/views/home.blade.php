@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="d-flex flex-row m-5">
+<div class="d-flex flex-row mt-5 mx-3">
 
     <div class="container">
         {{-- <div class="mapa"></div> --}}
@@ -49,8 +49,9 @@
         </div>
     </div>
 </div>
+<a class='btn btn-success mt-3 ms-4' href='#' data-bs-toggle='modal' data-bs-target='#AgregarRecoleccion'>Agendar Recoleccion</a>
 
 
-
+@include('modals.agregarRecoleccion')
 
 @stop
