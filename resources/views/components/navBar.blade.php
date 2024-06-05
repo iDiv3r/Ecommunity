@@ -9,7 +9,9 @@
     <div class="container-fluid">
 
         <div class="d-flex">
-            <button class="btn navbar-brand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">|||</button>
+            <button class="btn navbar-brand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                <img src="{{url('images/icons/menu.png')}}" alt="">
+            </button>
             <a class="btn navbar-brand nav-link" type="button" href={{route('home')}}>Ecommunity</a>
         </div>
         
