@@ -22,7 +22,7 @@
 
     @show
     
-    <div >
+    <div>
         @yield( 'content')
     </div>
 

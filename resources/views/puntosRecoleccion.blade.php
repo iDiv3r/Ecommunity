@@ -44,7 +44,7 @@
     
         <div class="container">
             {{-- <div class="mapa"></div> --}}
-            <img src= {{url('images/test.jpg')}} class="mapa">
+            <img src= {{url('images/mapa.webp')}} class="mapa">
         </div>
     
         

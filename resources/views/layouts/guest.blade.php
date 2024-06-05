@@ -16,76 +16,18 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
-    {{-- <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body class="fondo">
+    <div class="d-flex">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div> --}}
-    
-    <body style="background: #BAC6B0">
-    
-        <div class="position-absolute top-50 start-50 translate-middle">
-            <div>
+        {{-- Login --}}
+        <div class="container">
+            <div class="position-absolute top-50 start-30 translate-middle col-4 " >
                 <div class="row justify-content-center">
-                    <div class="card rounded-4 border border-black" style="background: rgba(115, 129, 104,0.3)">
-                        <div class="card-body d-flex flex-column text-center">
-                            {{-- <a> <img class="ImagenLogin img-fluid mb-2 mt-2" src="img/logo.png" style="height:auto; width:320px"/> </a> --}}
-                            <span class="h1 mt-2 mx-5">Inicio de sesión</span>
+                    <div class="card rounded-4 border border-black h-100" style="background: white, width:1000px" >
+                        <div class="card-body d-flex flex-column text-start">
+                            <div class="d-flex justify-content-center">
+                                <a> <img class="img-fluid mb-5 mt-3" src="{{url('images/ecologo.png')}}" style="height:auto; width:32vh"> </a>
+                            </div>
                             
                             @yield('content')
                             
@@ -93,11 +35,58 @@
                     </div>
                 </div>
             </div>
-            
-            
-        <div>
+        </div>
+
+        {{-- carousel --}}
+        <div class="container border">
+            <div class="position-absolute top-50 start-75 translate-middle col-4 " >
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{url('images/carousel1.jpeg')}}" class="d-block w-100 rounded-4 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <b>
+                                <p class="fs-2" style="color:black">¿Sabias que...?</p>
+                                <p style="color:black">El reciclaje de papel ahorra un 30% de electriciadad y 70% del agua que normalmente se usa para producirlo a partir de madera.</p>
+                            </b>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://us-tuna-sounds-images.voicemod.net/fb8a5ccc-b05f-4822-9cbe-c1ee5ab0c37a-1712592970483.jpg" class="d-block w-100 rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>¿Listo para la segunda ronda?</h5>
+                        <p>El reciclaje de las latas de aluminio es tan rápido que pueden volver al estante de una tienda en menos de 2 meses.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{url('images/imagen1080p.png')}}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>!Vuélvete un Héroe Energético!</h5>
+                        <p>Reciclando una botella de plástico, ahorramos la energía necesaria para mantener una bombilla encendida por 6 horas.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
 
 
-    </body>
+
 </body>
 </html>

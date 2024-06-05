@@ -26,10 +26,10 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Madhouse</td>
-                        <td>no se</td>
-                        <td>mi casa</td>
-                        <td>Madhouse@gmail.cum</td>
+                        <td>Empresa1</td>
+                        <td>Reciclaje</td>
+                        <td>---</td>
+                        <td>empresa@gmail.com</td>
                         <td>4422342323</td>
                         <td>11-2-3</td>
                         <td>

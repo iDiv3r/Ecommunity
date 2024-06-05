@@ -2,7 +2,9 @@
 
 @section('content')
 
-<div class="mt-5">
+<span class="h1 mt-2">Inicio de sesión</span>
+<div class="mt-4">
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
         <div class="">
@@ -34,16 +36,17 @@
         </div>
     
         <div class="">
-                <a class="btn btn-link mt-3" href="{{ route('password.request') }}">
+            <div class="d-flex justify-content-between">
+                <a class="btn btn-link mt-3 start-0" href="{{ route('password.request') }}">
                     {{ __('¿Olvidaste tu contraseña?') }}
                 </a>
                 <br>
-                <a class="btn btn-link" href="{{url('/register')}}">
+                <a class="btn btn-link mt-3 start-100" href="{{url('/register')}}">
                     {{__('Regístrate')}}
                 </a>
+            </div>
             
-            <br>
-            <button type="submit" class="btn btn-success mt-2">
+            <button type="submit" class="btn btn-success mt-3 w-100">
                 {{ __('Acceder') }}
             </button>
         </div>
